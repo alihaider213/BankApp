@@ -39,26 +39,26 @@ export default function AccountData() {
         chooseAccount = chooseAccount.trim();
         initialDeposit = initialDeposit.trim();
 
-        // if (name.length < 3) {
-        //     return window.notify("Please enter your full name", "error")
-        // }
-        // if (cnic.length !== 13) {
-        //     return window.notify("Please enter 13 digit of CNIC without dashes", "error")
-        // }
+        if (name.length < 3) {
+            return window.notify("Please enter your full name", "error")
+        }
+        if (cnic.length !== 13) {
+            return window.notify("Please enter 13 digit of CNIC without dashes", "error")
+        }
 
-        // if (branchCode.length !== 2) {
-        //     return window.notify("Please Enter correct Branch Code", "error")
-        // }
-        // if (accountNo.length !== 9) {
-        //     return window.notify("Please insert correct account no. of nine digits", "error")
-        // }
-        // if (chooseAccount === "") {
-        //     return window.notify("Please the account type", "error")
-        // }
+        if (branchCode.length !== 2) {
+            return window.notify("Please Enter correct Branch Code", "error")
+        }
+        if (accountNo.length !== 9) {
+            return window.notify("Please insert correct account no. of nine digits", "error")
+        }
+        if (chooseAccount === "") {
+            return window.notify("Please the account type", "error")
+        }
 
-        // if (initialDeposit < 500) {
-        //     return window.notify("Please enter some amount", "error")
-        // }
+        if (initialDeposit < 500) {
+            return window.notify("Please enter some amount", "error")
+        }
 
         setIsProcessing(true)
         let formData = { name, cnic, branchCode, accountNo, chooseAccount, initialDeposit }
